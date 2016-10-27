@@ -15,6 +15,8 @@
 		F0A448081DC0C5090044341E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A448061DC0C5090044341E /* LaunchScreen.storyboard */; };
 		F0A448131DC0C50A0044341E /* BouncingAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A448121DC0C50A0044341E /* BouncingAnimationTests.swift */; };
 		F0A4481E1DC0C50A0044341E /* BouncingAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4481D1DC0C50A0044341E /* BouncingAnimationUITests.swift */; };
+		F0A4482C1DC0C5300044341E /* AnnotationXibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0A4482B1DC0C5300044341E /* AnnotationXibView.xib */; };
+		F0A4482E1DC0C53C0044341E /* MonthYearPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4482D1DC0C53C0044341E /* MonthYearPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		F0A448191DC0C50A0044341E /* BouncingAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BouncingAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A4481D1DC0C50A0044341E /* BouncingAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncingAnimationUITests.swift; sourceTree = "<group>"; };
 		F0A4481F1DC0C50A0044341E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0A4482B1DC0C5300044341E /* AnnotationXibView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnnotationXibView.xib; sourceTree = "<group>"; };
+		F0A4482D1DC0C53C0044341E /* MonthYearPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthYearPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				F0A447FA1DC0C5090044341E /* AppDelegate.swift */,
+				F0A4482B1DC0C5300044341E /* AnnotationXibView.xib */,
 				F0A447FC1DC0C5090044341E /* ViewController.swift */,
+				F0A4482D1DC0C53C0044341E /* MonthYearPickerView.swift */,
 				F0A447FE1DC0C5090044341E /* Main.storyboard */,
 				F0A448041DC0C5090044341E /* Assets.xcassets */,
 				F0A448061DC0C5090044341E /* LaunchScreen.storyboard */,
@@ -235,6 +241,7 @@
 				F0A448081DC0C5090044341E /* LaunchScreen.storyboard in Resources */,
 				F0A448051DC0C5090044341E /* Assets.xcassets in Resources */,
 				F0A448001DC0C5090044341E /* Main.storyboard in Resources */,
+				F0A4482C1DC0C5300044341E /* AnnotationXibView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0A4482E1DC0C53C0044341E /* MonthYearPickerView.swift in Sources */,
 				F0A447FD1DC0C5090044341E /* ViewController.swift in Sources */,
 				F0A448031DC0C5090044341E /* BouncingAnimation.xcdatamodeld in Sources */,
 				F0A447FB1DC0C5090044341E /* AppDelegate.swift in Sources */,
@@ -407,7 +415,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BouncingAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Amrit.BouncingAnimation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiwariammit.Amrit.BouncingAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -418,7 +426,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BouncingAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Amrit.BouncingAnimation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiwariammit.Amrit.BouncingAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -488,6 +496,7 @@
 				F0A448241DC0C50A0044341E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0A448251DC0C50A0044341E /* Build configuration list for PBXNativeTarget "BouncingAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +505,7 @@
 				F0A448271DC0C50A0044341E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0A448281DC0C50A0044341E /* Build configuration list for PBXNativeTarget "BouncingAnimationUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +514,7 @@
 				F0A4482A1DC0C50A0044341E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

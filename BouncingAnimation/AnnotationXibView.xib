@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="yLy-tz-NAQ" customClass="MonthYearPickerView" customModule="BouncingAnimation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Picker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Y2-ZL-YPW">
+                    <rect key="frame" x="106" y="10" width="88" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFl-bb-7Pz">
+                    <rect key="frame" x="127" y="249" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="btnAc:" destination="yLy-tz-NAQ" eventType="touchUpInside" id="RBP-oV-Grp"/>
+                    </connections>
+                </button>
+                <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Iwi-2h-WKm">
+                    <rect key="frame" x="33" y="51" width="221" height="179"/>
+                    <connections>
+                        <outlet property="dataSource" destination="yLy-tz-NAQ" id="270-NV-SnB"/>
+                        <outlet property="delegate" destination="yLy-tz-NAQ" id="2om-7U-Od0"/>
+                    </connections>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Iwi-2h-WKm" secondAttribute="trailing" constant="46" id="0At-GA-Nap"/>
+                <constraint firstItem="4Y2-ZL-YPW" firstAttribute="centerX" secondItem="yLy-tz-NAQ" secondAttribute="centerX" id="HVU-cI-Wta"/>
+                <constraint firstItem="yFl-bb-7Pz" firstAttribute="centerX" secondItem="yLy-tz-NAQ" secondAttribute="centerX" id="OXN-AZ-uJ8"/>
+                <constraint firstItem="yFl-bb-7Pz" firstAttribute="top" secondItem="Iwi-2h-WKm" secondAttribute="bottom" constant="19" id="a56-ho-url"/>
+                <constraint firstItem="Iwi-2h-WKm" firstAttribute="leading" secondItem="yLy-tz-NAQ" secondAttribute="leading" constant="33" id="bLS-ZY-wy9"/>
+                <constraint firstItem="4Y2-ZL-YPW" firstAttribute="top" secondItem="yLy-tz-NAQ" secondAttribute="top" constant="10" id="bzc-dR-TXF"/>
+                <constraint firstAttribute="bottom" secondItem="yFl-bb-7Pz" secondAttribute="bottom" constant="21" id="sdb-i3-n3a"/>
+                <constraint firstItem="Iwi-2h-WKm" firstAttribute="top" secondItem="4Y2-ZL-YPW" secondAttribute="bottom" constant="20" id="z17-7W-bQU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="datePicker" destination="Iwi-2h-WKm" id="La5-5E-N26"/>
+            </connections>
+            <point key="canvasLocation" x="1269" y="-495"/>
+        </view>
+    </objects>
+</document>
