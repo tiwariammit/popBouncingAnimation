@@ -17,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+//        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "back")
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(-500, 0), forBarMetrics: .Default)
+        //UIBarButtonItem.appearance().setTitleTextAttributes([IQTitleBarButtonItem : ""]?, forState: UIControlState.Normal)
+        
+//        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "back")
+        UINavigationBar.appearance().barTintColor = UIColor.customBlueColor()
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
         return true
     }
 

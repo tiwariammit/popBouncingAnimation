@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BZP-xb-0Qc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -18,25 +18,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwe-d3-YDD">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="234" y="285" width="132" height="30"/>
+                                <state key="normal" title="Bouncing Animaion"/>
                                 <connections>
                                     <action selector="PopOverPresent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VW4-ey-Zme"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wy8-dF-sva">
+                                <rect key="frame" x="241" y="83" width="118" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="Vq3-Vb-CoZ"/>
+                                    <constraint firstAttribute="height" constant="55" id="w8h-hd-nAT"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Gwe-d3-YDD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TUV-QU-bXd"/>
+                            <constraint firstItem="wy8-dF-sva" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f3T-0F-Z7b"/>
                             <constraint firstItem="Gwe-d3-YDD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wEH-Yi-Jcc"/>
+                            <constraint firstItem="wy8-dF-sva" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="wRF-jC-BDt"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Qn7-Aq-n9x"/>
                     <connections>
                         <outlet property="btnDate" destination="Gwe-d3-YDD" id="DFh-fy-kS1"/>
+                        <outlet property="imageView" destination="wy8-dF-sva" id="xQu-K1-kwp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="912" y="-346"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C7c-0z-mSR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BZP-xb-0Qc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NSY-dD-dfU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sFz-WY-FDL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iqw-zK-ZNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="238" y="-346"/>
         </scene>
     </scenes>
 </document>
