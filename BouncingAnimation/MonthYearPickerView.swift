@@ -35,7 +35,7 @@ class MonthYearPickerView: UIView, UIPickerViewDelegate, UIPickerViewDataSource 
     
     func commonSetup() {
         
-        var yrs = NSCalendar(identifier: NSCalendarIdentifierGregorian)!.component(.Year, fromDate: NSDate())
+        var yrs = (Calendar(identifier: Calendar.Identifier.gregorian) as NSCalendar).component(.year, from: Date())
         
         for _ in 1...6 {
             
@@ -50,11 +50,11 @@ class MonthYearPickerView: UIView, UIPickerViewDelegate, UIPickerViewDataSource 
     
     
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch component {
         case 0:
             return "\(months[row])"
@@ -64,7 +64,7 @@ class MonthYearPickerView: UIView, UIPickerViewDelegate, UIPickerViewDataSource 
             return nil
         }
     }
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch component {
         case 0:
             return months.count
@@ -75,7 +75,7 @@ class MonthYearPickerView: UIView, UIPickerViewDelegate, UIPickerViewDataSource 
         }
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if component == 0{
             
@@ -88,7 +88,7 @@ class MonthYearPickerView: UIView, UIPickerViewDelegate, UIPickerViewDataSource 
     }
     
     
-    @IBAction func btnAc(sender: AnyObject) {
+    @IBAction func btnAc(_ sender: AnyObject) {
         
         handleOnDismiss()
     }
